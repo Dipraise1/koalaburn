@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { useWallet } from "@solana/wallet-adapter-react";
+
 import dynamic from 'next/dynamic';
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
@@ -11,7 +11,6 @@ const WalletMultiButtonDynamic = dynamic(
 );
 
 export default function Navbar() {
-  const { publicKey, connected } = useWallet();
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Close menu on route change (optional, for SPA navigation)

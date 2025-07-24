@@ -68,12 +68,18 @@ export function useBurner() {
     total: 0,
   });
   const [burnStats, setBurnStats] = useState<BurnStats>(() => {
-    const saved = localStorage.getItem("burnStats");
-    return saved ? JSON.parse(saved) : { sol: 0, tokens: 0, users: 0, fees: 0 };
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem("burnStats");
+      return saved ? JSON.parse(saved) : { sol: 0, tokens: 0, users: 0, fees: 0 };
+    }
+    return { sol: 0, tokens: 0, users: 0, fees: 0 };
   });
   const [recentBurns, setRecentBurns] = useState<RecentBurn[]>(() => {
-    const saved = localStorage.getItem("recentBurns");
-    return saved ? JSON.parse(saved) : [];
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem("recentBurns");
+      return saved ? JSON.parse(saved) : [];
+    }
+    return [];
   });
   const [error, setError] = useState<string | null>(null);
   const [isTokenBurnt, setIsTokenBurnt] = useState(false);
@@ -400,15 +406,17 @@ export function useBurner() {
 
       // Update stats
       setBurnStats((stats) => {
-        localStorage.setItem(
-          "burnStats",
-          JSON.stringify({
-            sol: stats.sol + totalRentRecovered,
-            tokens: stats.tokens + burnedCount,
-            users: stats.users + 1,
-            fees: (stats.fees || 0) + totalFeesSol,
-          })
-        );
+        if (typeof window !== 'undefined') {
+          localStorage.setItem(
+            "burnStats",
+            JSON.stringify({
+              sol: stats.sol + totalRentRecovered,
+              tokens: stats.tokens + burnedCount,
+              users: stats.users + 1,
+              fees: (stats.fees || 0) + totalFeesSol,
+            })
+          );
+        }
         return {
           sol: stats.sol + totalRentRecovered,
           tokens: stats.tokens + burnedCount,
@@ -418,19 +426,21 @@ export function useBurner() {
       });
 
       setRecentBurns((burns) => {
-        localStorage.setItem(
-          "recentBurns",
-          JSON.stringify([
-            {
-              address: publicKey.toBase58(),
-              tokens: burnedCount,
-              sol: totalRentRecovered,
-              fees: totalFeesSol,
-              time: new Date().toISOString(),
-            },
-            ...burns.slice(0, 4),
-          ])
-        );
+        if (typeof window !== 'undefined') {
+          localStorage.setItem(
+            "recentBurns",
+            JSON.stringify([
+              {
+                address: publicKey.toBase58(),
+                tokens: burnedCount,
+                sol: totalRentRecovered,
+                fees: totalFeesSol,
+                time: new Date().toISOString(),
+              },
+              ...burns.slice(0, 4),
+            ])
+          );
+        }
         return [
           {
             address: publicKey.toBase58(),

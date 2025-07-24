@@ -39,7 +39,7 @@ export default function BurnPage() {
     if (!burning && !error && isTokenBurnt && connected) {
       toast.success("Burn complete!");
     }
-  }, [burning, error, scannedTokens?.length, connected]);
+  }, [burning, error, scannedTokens?.length, connected, isTokenBurnt]);
 
   return (
     <main>
@@ -119,7 +119,7 @@ export default function BurnPage() {
                 {scannedTokens?.length} tokens found • Potential savings:{" "}
                 <span className="potential-savings">
                   {(
-                    scannedTokens?.filter((t: any) => t.selected).length * 0.002
+                    scannedTokens?.filter((t) => t.selected).length * 0.002
                   ).toFixed(3)}
                 </span>{" "}
                 SOL
@@ -137,7 +137,7 @@ export default function BurnPage() {
                     No tokens found yet.
                   </motion.div>
                 ) : (
-                  scannedTokens?.map((token: any) => (
+                  scannedTokens?.map((token) => (
                     <motion.div
                       key={token.id}
                       className="token-item"
@@ -177,7 +177,7 @@ export default function BurnPage() {
                 <label className="checkbox-container">
                   <input
                     type="checkbox"
-                    checked={scannedTokens?.every((t: any) => t.selected)}
+                    checked={scannedTokens?.every((t) => t.selected)}
                     onChange={(e) => selectAll(e.target.checked)}
                   />
                   <span className="checkmark"></span>
@@ -194,7 +194,7 @@ export default function BurnPage() {
                   onClick={burnSelected}
                   disabled={
                     burning ||
-                    scannedTokens?.filter((t: any) => t.selected).length === 0
+                    scannedTokens?.filter((t) => t.selected).length === 0
                   }
                 >
                   <span>{burning ? "Burning..." : "Burn Selected Tokens"}</span>

@@ -53,7 +53,7 @@ export default function HomePage() {
           </div>
           <div className="about-content">
             <div className="about-text">
-              <h3>The Sleepy Koala's Awakening</h3>
+              <h3>The Sleepy Koala&apos;s Awakening</h3>
               <p>
                 Once upon a time in the Solana ecosystem, there lived a sleepy
                 koala named $KOALA. This cuddly creature spent its days napping

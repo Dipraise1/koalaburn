@@ -1,6 +1,6 @@
 "use client";
 import './globals.css'
-import type { Metadata } from 'next'
+
 import { WalletProvider } from '../components/WalletProvider'
 import { Toaster } from 'react-hot-toast'
 import Navbar from '../components/Navbar'
