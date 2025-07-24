@@ -1,7 +1,6 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -23,12 +22,20 @@ export default function HomePage() {
               <Link href="/burn" className="btn btn-primary">
                 Burn with $KOALA
               </Link>
-              <a href="#burn-leaderboard" className="btn btn-secondary">Track the Fire</a>
+              <a href="#burn-leaderboard" className="btn btn-secondary">
+                Track the Fire
+              </a>
             </div>
           </div>
           <div className="hero-illustration">
             <div className="hero-image-container">
-              <Image src="/koala-character.jpg" alt="Koala Mascot" fill className="hero-koala-image" sizes="(max-width: 600px) 100vw, 50vw" />
+              <Image
+                src="/koala-character.jpg"
+                alt="Koala Mascot"
+                fill
+                className="hero-koala-image"
+                sizes="(max-width: 600px) 100vw, 50vw"
+              />
               <div className="floating-particle"></div>
               <div className="floating-particle"></div>
               <div className="floating-particle"></div>
@@ -48,15 +55,24 @@ export default function HomePage() {
             <div className="about-text">
               <h3>The Sleepy Koala's Awakening</h3>
               <p>
-                Once upon a time in the Solana ecosystem, there lived a sleepy koala named $KOALA. This cuddly creature spent its days napping in eucalyptus trees, completely unaware of the blockchain revolution happening around it.
+                Once upon a time in the Solana ecosystem, there lived a sleepy
+                koala named $KOALA. This cuddly creature spent its days napping
+                in eucalyptus trees, completely unaware of the blockchain
+                revolution happening around it.
               </p>
               <p>
-                One fateful day, $KOALA woke up to discover the power of burning SOL. Now this once-lazy marsupial has become the chillest burn master on Solana, turning every transaction into a cozy campfire that warms the entire ecosystem.
+                One fateful day, $KOALA woke up to discover the power of burning
+                SOL. Now this once-lazy marsupial has become the chillest burn
+                master on Solana, turning every transaction into a cozy campfire
+                that warms the entire ecosystem.
               </p>
               <div className="about-features">
                 <div className="feature">
                   <h4>Deflationary Mechanics</h4>
-                  <p>Every transaction automatically burns SOL, creating scarcity and value</p>
+                  <p>
+                    Every transaction automatically burns SOL, creating scarcity
+                    and value
+                  </p>
                 </div>
                 <div className="feature">
                   <h4>Community Driven</h4>
@@ -64,12 +80,20 @@ export default function HomePage() {
                 </div>
                 <div className="feature">
                   <h4>Transparent</h4>
-                  <p>All burns are publicly verifiable on the Solana blockchain</p>
+                  <p>
+                    All burns are publicly verifiable on the Solana blockchain
+                  </p>
                 </div>
               </div>
             </div>
             <div className="about-image-container">
-              <Image src="/koala-meditation.jpg" alt="Sleepy Koala" fill className="about-koala-image" sizes="(max-width: 600px) 100vw, 50vw" />
+              <Image
+                src="/koala-meditation.jpg"
+                alt="Sleepy Koala"
+                fill
+                className="about-koala-image"
+                sizes="(max-width: 600px) 100vw, 50vw"
+              />
               <div className="sleep-bubbles">
                 <div className="bubble"></div>
                 <div className="bubble"></div>
@@ -91,7 +115,9 @@ export default function HomePage() {
             {/* No leaderboard data yet. Connect your wallet and burn tokens to appear here! */}
           </div>
           <div className="leaderboard-actions">
-            <Link href="/burn" className="btn btn-primary">Start Burning</Link>
+            <Link href="/burn" className="btn btn-primary">
+              Start Burning
+            </Link>
           </div>
         </div>
       </section>
@@ -110,14 +136,21 @@ export default function HomePage() {
                 <div className="feed-container">
                   <div className="tweet">
                     <div className="tweet-header">
-                      <Image src="/koala-character.jpg" alt="Koala User" width={40} height={40} className="tweet-avatar" />
+                      <Image
+                        src="/koala-character.jpg"
+                        alt="Koala User"
+                        width={40}
+                        height={40}
+                        className="tweet-avatar"
+                      />
                       <div className="tweet-info">
                         <div className="tweet-name">KoalaFan123</div>
                         <div className="tweet-handle">@koalafan</div>
                       </div>
                     </div>
                     <div className="tweet-content">
-                      Just burned some SOL with $KOALA! The chillest burn on Solana! #KoalaBurn
+                      Just burned some SOL with $KOALA! The chillest burn on
+                      Solana! #KoalaBurn
                     </div>
                     <div className="tweet-actions">
                       <span className="action">Like 42</span>
@@ -132,16 +165,40 @@ export default function HomePage() {
                 <h3>Community Gallery</h3>
                 <div className="meme-grid">
                   <div className="meme-item">
-                    <Image src="/koala-meditation.jpg" alt="Koala Meditation" width={200} height={200} className="ecosystem-image" />
+                    <Image
+                      src="/koala-meditation.jpg"
+                      alt="Koala Meditation"
+                      width={200}
+                      height={200}
+                      className="ecosystem-image"
+                    />
                   </div>
                   <div className="meme-item">
-                    <Image src="/koala-outdoors.jpg" alt="Koala Outdoors" width={200} height={200} className="ecosystem-image" />
+                    <Image
+                      src="/koala-outdoors.jpg"
+                      alt="Koala Outdoors"
+                      width={200}
+                      height={200}
+                      className="ecosystem-image"
+                    />
                   </div>
                   <div className="meme-item">
-                    <Image src="/koala-character.jpg" alt="Koala Character" width={200} height={200} className="ecosystem-image" />
+                    <Image
+                      src="/koala-character.jpg"
+                      alt="Koala Character"
+                      width={200}
+                      height={200}
+                      className="ecosystem-image"
+                    />
                   </div>
                   <div className="meme-item">
-                    <Image src="/koala-forest.jpg" alt="Koala Forest" width={200} height={200} className="ecosystem-image" />
+                    <Image
+                      src="/koala-forest.jpg"
+                      alt="Koala Forest"
+                      width={200}
+                      height={200}
+                      className="ecosystem-image"
+                    />
                   </div>
                 </div>
               </div>
@@ -151,7 +208,13 @@ export default function HomePage() {
               <div className="social-buttons">
                 <a href="#" className="social-btn">
                   <span className="btn-icon">
-                    <Image src="/koala-character.jpg" alt="Twitter" width={40} height={40} className="social-image" />
+                    <Image
+                      src="/koala-character.jpg"
+                      alt="Twitter"
+                      width={40}
+                      height={40}
+                      className="social-image"
+                    />
                   </span>
                   <span className="btn-content">
                     <span className="btn-title">Twitter</span>
@@ -160,7 +223,13 @@ export default function HomePage() {
                 </a>
                 <a href="#" className="social-btn">
                   <span className="btn-icon">
-                    <Image src="/koala-outdoors.jpg" alt="Telegram" width={40} height={40} className="social-image" />
+                    <Image
+                      src="/koala-outdoors.jpg"
+                      alt="Telegram"
+                      width={40}
+                      height={40}
+                      className="social-image"
+                    />
                   </span>
                   <span className="btn-content">
                     <span className="btn-title">Telegram</span>
@@ -169,7 +238,13 @@ export default function HomePage() {
                 </a>
                 <a href="#" className="social-btn">
                   <span className="btn-icon">
-                    <Image src="/koala-meditation.jpg" alt="Discord" width={40} height={40} className="social-image" />
+                    <Image
+                      src="/koala-meditation.jpg"
+                      alt="Discord"
+                      width={40}
+                      height={40}
+                      className="social-image"
+                    />
                   </span>
                   <span className="btn-content">
                     <span className="btn-title">Discord</span>
@@ -218,4 +293,4 @@ export default function HomePage() {
       </footer>
     </main>
   );
-} 
+}
