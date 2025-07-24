@@ -152,7 +152,7 @@ export function useBurner() {
       //     programId: TOKEN_PROGRAM_ID,
       //   }
       // );
-      // console.log("Token accounts:", tokenAccounts);
+
       // const filtered = tokenAccounts.value.filter((account) => {
       //   const balance = parseFloat(
       //     account.account.data.parsed.info.tokenAmount.uiAmount
