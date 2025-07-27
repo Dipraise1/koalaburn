@@ -35,6 +35,7 @@ export default function HomePage() {
                 fill
                 className="hero-koala-image"
                 sizes="(max-width: 600px) 100vw, 50vw"
+                priority
               />
               <div className="floating-particle"></div>
               <div className="floating-particle"></div>
